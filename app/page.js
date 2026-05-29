@@ -68,6 +68,9 @@ export default function Home() {
   if (page === 'about') return (
     <div style={{ background: bg, minHeight: '100vh', fontFamily: 'sans-serif' }}>
       <Nav />
+      <div style={{ padding: '16px 24px', borderBottom: '1px solid ' + border }}>
+  <span onClick={() => setPage('home')} style={{ color: '#c9a84c', fontSize: 13, cursor: 'pointer', letterSpacing: '0.05em' }}>← Back to Home</span>
+</div>
       <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 24px' }}>
         <div style={{ display: 'inline-block', border: '1px solid #c9a84c', color: '#c9a84c', fontSize: 11, letterSpacing: '0.1em', padding: '4px 12px', borderRadius: 2, marginBottom: 24 }}>ABOUT</div>
         <h1 style={{ color: textMain, fontSize: 28, fontWeight: 500, margin: '0 0 16px' }}>Diplomatic Brief Generator</h1>
@@ -106,7 +109,10 @@ export default function Home() {
 
   if (page === 'archive') return (
     <div style={{ background: bg, minHeight: '100vh', fontFamily: 'sans-serif' }}>
-      <Nav />
+      <Nav /> 
+      <div style={{ padding: '16px 24px', borderBottom: '1px solid ' + border }}>
+  <span onClick={() => setPage('home')} style={{ color: '#c9a84c', fontSize: 13, cursor: 'pointer', letterSpacing: '0.05em' }}>← Back to Home</span>
+</div>
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '48px 24px' }}>
         <div style={{ display: 'inline-block', border: '1px solid #c9a84c', color: '#c9a84c', fontSize: 11, letterSpacing: '0.1em', padding: '4px 12px', borderRadius: 2, marginBottom: 24 }}>ARCHIVE</div>
         <h1 style={{ color: textMain, fontSize: 28, fontWeight: 500, margin: '0 0 8px' }}>Brief Archive</h1>
@@ -208,7 +214,7 @@ export default function Home() {
                 <span style={{ color: textMuted, fontSize: 11, letterSpacing: '0.12em' }}>BRIEF OUTPUT</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#c9a84c', fontSize: 11 }}>
                   <div style={{ width: 6, height: 6, background: '#c9a84c', borderRadius: '50%' }} /> AI Generated
-                </div>
+                </div>s
               </div>
               <div style={{ padding: 20 }}>
                 <p style={{ color: isDark ? '#a0b4c8' : '#2a3a54', fontSize: 14, lineHeight: 1.8, whiteSpace: 'pre-wrap', margin: 0 }}>{result}</p>
